@@ -1,0 +1,46 @@
+:root {
+    --color-rojo:red;
+    --color-azul:blue;
+    --color-verde:green;
+    --eminem:"papelito";
+
+
+}
+
+
+.titulo {
+    font-weight: bold;
+    color: grey;
+    background-color:red;
+    display:block;
+}
+
+
+.card{
+    border:2px solid black;
+    display:inline-block;
+}
+
+.card figcaption{
+    padding: 1rem;
+}
+
+.rotate-45{
+    transform: rotate(45deg);
+}
+
+.rotate-135{
+    transform: rotate(135deg);
+}
+
+.opacity-80{
+    opacity: .8;
+}
+
+.opacity-40{
+    opacity: .4;
+}
+.sepia{
+    filter: sepia(1);
+}
+
