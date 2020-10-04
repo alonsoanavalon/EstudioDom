@@ -33,3 +33,72 @@ $newCard.innerHTML = `
 $newCard.classList.add("card");
 
 $cards.replaceChild($newCard,$cards.children[1])
+
+
+
+
+
+
+
+const $template2 = document.getElementById("template-card2").content
+const $fragment2 = document.createDocumentFragment()
+
+console.log($template2)
+
+const datos = [{src:"https://placeimg.com/200/200/any", alt:"any"},
+{src:"https://placeimg.com/200/200/animals", alt:"animales"},
+{src:"https://placeimg.com/200/200/tech", alt:"tecnología"}]
+
+console.log($template2.firstElementChild.classList = "card")
+
+
+datos.forEach(el => {
+    $template2.querySelector("img").setAttribute("src", el.src)
+    $template2.querySelector("img").setAttribute("alt", el.alt)
+    $template2.querySelector("figcaption").textContent = el.alt
+
+    let $clone = document.importNode($template2, true)
+    $fragment2.appendChild($clone)
+
+})
+
+$cards.appendChild($fragment2)
+
+
+const $template3 = document.getElementById("template-card3").content
+const $fragment3 = document.createDocumentFragment()
+
+const datitos = [
+    {
+        p:"Soy el primer parrafo",
+        h1: "Soy el primer Título",
+        img: "https://placeimg.com/200/200/any"
+    },
+    {
+        p:"Soy el segundo parrafo",
+        h1: "Soy el segundo titulo",
+        img: "https://placeimg.com/200/200/any"
+    },
+    {
+        p:"Soy el tercer parrafo",
+        h1: "Soy el tercer Título",
+        img: "https://placeimg.com/200/200/any"
+    }
+    
+]
+
+datitos.forEach(e => {
+
+    $template3.querySelector("h1").textContent = e.h1
+    $template3.querySelector("p").textContent = e.p
+    $template3.querySelector("img").setAttribute("src",e.img)
+
+    let $clone = document.importNode($template3, true)
+    $fragment3.appendChild($clone)
+})
+
+$cards.appendChild($fragment3)
+
+const $cloneCards = $cards.cloneNode(true)
+const $body = document.body
+$body.appendChild($cloneCards)

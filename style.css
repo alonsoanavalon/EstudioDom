@@ -7,6 +7,9 @@
 
 }
 
+.perrito {
+    color:black;
+}
 
 .titulo {
     font-weight: bold;
@@ -15,6 +18,24 @@
     display:block;
 }
 
+
+.eventos-flujo div{
+    padding:4rem;
+    font-size:2rem;
+    text-align: center;
+}
+
+.uno {
+    background-color: yellow;
+}
+
+.dos {
+    background-color: gold;
+}
+
+.tres {
+    background-color: lightyellow;
+}
 
 .card{
     border:2px solid black;
